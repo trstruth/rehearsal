@@ -7,6 +7,7 @@
 ```
 git clone git@github.com:trstruth/rehearsal.git
 cd rehearsal
+git submodule init && git submodule update
 make up
 ```
 Point a browser at localhost:5000 and you should see a yaml editor.  Paste your favorite orquesta workflow definition into the editor and wait for a second or two.
@@ -20,7 +21,7 @@ The orquesta source code is bind mounted as `./image/orquesta:/orquesta` and pip
 Rehearsal is dockerized because the installation of its dependencies (namely pygraphviz) gave me some issues that I didn't want other people to try to deal with.  I think people who have worked with stackstorm's [official docker container](https://github.com/StackStorm/st2-docker/) will find the structure of this repo to be fairly familiar.
 
 ### Further Reading
-- If you're interested in the frontend code, read the [editor](https://github.com/trstruth/rehearsal/blob/master/image/web/src/Editor.jsx) code
+- If you're interested in the frontend, read the [editor](https://github.com/trstruth/rehearsal/blob/master/image/web/src/Editor.jsx) code
 - If you want to know how the graph is constructed, read the [flask](https://github.com/trstruth/rehearsal/blob/master/image/web/app.py) code
 - If you *really* want to know how the graph is constructed, read the [orquesta](https://github.com/StackStorm/orquesta) source code
 
