@@ -1,0 +1,3 @@
+[submodule "image/orquesta"]
+	path = image/orquesta
+	url = https://github.com/StackStorm/orquesta
