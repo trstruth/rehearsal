@@ -28,7 +28,7 @@ COPY web /web
 WORKDIR /web
 RUN npm install && npm run dev
 
-RUN git clone https://github.com/StackStorm/orquesta.git /orquesta
+COPY orquesta /orquesta
 WORKDIR /orquesta
 RUN pip install -e .
 
