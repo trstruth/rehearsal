@@ -17,6 +17,10 @@ class Orquesta extends React.Component {
     }
 
     fetchDotAndUpdateState(yaml) {
+        if(yaml === ''){
+            this.setState({ error: '', dot: null });
+            return;
+        }
         const json_payload = JSON.stringify({
             "wf_def": yaml
         });
