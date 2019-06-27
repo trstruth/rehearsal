@@ -1,16 +1,34 @@
 <!doctype html>
 <html>
 
-	<head>
-		<title>
-			Orquesta Graph Editor
-		</title>
+  <head>
+    <title>
+      Orquesta Graph Editor
+    </title>
     <link rel="stylesheet" href="{{ url_for('node_modules.static', filename='bootstrap/dist/css/bootstrap.min.css') }}"/>
-	</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+  </head>
 
-	<body>
-		<div id="container"></div>
-		<script src={{ url_for('static', filename='Editor.bundle.js') }}></script>
-	</body>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Rehearsal - Orquesta Graph Editor</a>
+
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/trstruth/rehearsal" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <div id="container"></div>
+    <script src={{ url_for('static', filename='Editor.bundle.js') }}></script>
+  </body>
 
 </html>
