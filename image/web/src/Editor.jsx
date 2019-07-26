@@ -21,10 +21,9 @@ class EditorView extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="row">
-
-                    <div className="col-4">
+            <div className="container-fluid pl-0 pr-0">
+                <div className="row ml-0 mr-0">
+                    <div className="col-4 pl-0 pr-0">
                         <AceEditor
                             value={this.state.yamlSource}
                             mode="yaml"
@@ -40,7 +39,7 @@ class EditorView extends React.Component {
                         />
                     </div>
 
-                    <div className="col-8">
+                    <div className="col-8 pr-0 pl-0">
                         <Orquesta yaml={this.state.yamlSource} />
                     </div>
                 </div>
