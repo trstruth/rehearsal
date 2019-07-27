@@ -26,12 +26,12 @@ RUN apt-get install -y nodejs
 
 COPY web /web
 WORKDIR /web
-RUN npm install
+RUN npm install && npm run prod
 
 COPY orquesta /orquesta
 WORKDIR /orquesta
-RUN pip install -e .
+RUN python setup.py install
 
 WORKDIR /web
-COPY bin/docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["python"]
+CMD ["app.py"]
