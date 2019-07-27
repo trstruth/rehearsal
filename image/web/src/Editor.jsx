@@ -25,6 +25,7 @@ class EditorView extends React.Component {
                 <div className="row ml-0 mr-0">
                     <div className="col-4 pl-0 pr-0">
                         <AceEditor
+                            placeholder="Edit Orquesta workflow here"
                             value={this.state.yamlSource}
                             mode="yaml"
                             theme="github"
