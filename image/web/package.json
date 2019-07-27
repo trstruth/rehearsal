@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack --mode development",
-    "start": "webpack --mode development --watch"
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development --watch --watch-poll 1"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +27,6 @@
     "precss": "^3.1.2",
     "react": "^16.5.2",
     "react-ace": "^6.4.0",
-    "react-bootstrap-table-next": "^2.0.1",
     "react-dom": "^16.5.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

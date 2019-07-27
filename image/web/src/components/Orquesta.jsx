@@ -64,6 +64,11 @@ class Orquesta extends React.Component {
             )
         }
         else if (this.state.dot === null) {
+            if (this.state.error === '') {
+                return (
+                    <h6 className='text-center text-secondary'>Workflow graph will appear here</h6>
+                )
+            }
             return <p>{this.state.error}</p>
         }
     }
