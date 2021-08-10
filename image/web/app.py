@@ -59,7 +59,7 @@ def generate_agraph_string(wf_def):
         g_edge_crit = g_edge_data[0]['criteria']
         g_edge_label = '' if not g_edge_crit else g_edge_crit[0]
         # remove some special chars
-        g_edge_label = g_edge_label.replace('<', '').replace('%', '').replace('>', '')
+        g_edge_label = g_edge_label.replace('<', '&lt;').replace('%', '&#37;').replace('>', '&gt;')
         a_edge.attr['label'] = g_edge_label
 
         if 'succeeded' in g_edge_label:
